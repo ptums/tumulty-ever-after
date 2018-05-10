@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/**
+* Forrest Green: #396f57
+* Forrest Green Light: #60BB93
+* Ivory: #fefef3
+* Pale Golden Rod #e1dc9b
+*
+**/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color:#fefef3;
+}
+
+.btn-forest {
+  color: #fff;
+  background-color: #396f57;
+  border-color: #396f57;
+}
+.btn-forest:hover {
+  background-color:#60BB93;
+  border-color:#60BB93;
+}
+.container > .card {
+  margin:0rem;
+}
+.App { 
+  margin: none;
+}
+.App > .row > .body-content > .card > svg {
+  position: absolute;
+  right: -15%;
+  font-size: 1.8rem;
+  color:brown;
+}
+.App > .row > .body-content > .card > svg:hover {
+  cursor: pointer;
+  color:chocolate;
+}
+.App > .row > .body-content > .card {
+  box-shadow: 0px 1px 15px #e1dc9b;
+  border-radius:10px;
+}
+.App > .row > .body-content > .card > .card-image-top {
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+.App > .row > .body-content > .card > h1, h2 {
+  font-weight: 900;
+  color: #396f57;
+}
+.AddGuest {
+  padding: 3rem;
+  padding-top: 0rem;
+}
+.AddGuest > form {
+  width: 30rem;
+  padding:2rem;
+}
+.AddGuest > form > label  {
+  margin-bottom:1rem;
+  display:block
+}
+#ModalLoginForm {
+  padding:2rem;
+}
+.LoveStoryVideo{
+  padding:3rem;
+}
+
+@media (min-width: 992px) {
+  .offset-lg-1 {
+    margin-left: 10.333333%;
+  }
+  .App { 
+  margin: 2rem;
+}
+}
+
+@media (max-width: 992px) {
+  .App > .icon-border > svg {
+   display:none;
+ }
+}
