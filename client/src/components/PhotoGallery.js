@@ -1,10 +1,38 @@
 import React from 'react';
+import Slider from "react-slick";
 
-const PhotoGallery = () => (
-  <div className="PhotoGallery">
-    <h3 className="text-center mt-4">Photo Gallery right there.</h3>
-    <p className="text-center mt-4 mb-4">Use: <a href="https://kenwheeler.github.io/slick/">https://kenwheeler.github.io/slick/</a></p>
-  </div>
-);
+const PhotoGallery = () => {
+  const settings = {
+    className: 'center',
+    centerMode: true,
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    speed: 500,
+  };
+
+  return (
+    <Slider {...settings}>
+      <div>
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
+  );
+};
 
 export default PhotoGallery;

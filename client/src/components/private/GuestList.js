@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+
 
 const GUEST_LIST = gql`
 query {
@@ -13,17 +15,11 @@ query {
 `;
 
 const GuestList = graphql(GUEST_LIST)(props => (
-  <div>
-    { (props.data.guests) ?
-        props.data.guests.map(val => (
-          <div key={val.name}>
-            <p>Name: {val.name}</p>
-            <p>Guest: {val.guest}</p>
-            <p>Contact: {val.contact}</p>
-          </div>
-        )) : ''
-    }
-  </div>
+  <BootstrapTable data={ props.data.guests } height="150" scrollTop="Bottom">
+    <TableHeaderColumn dataField="name" isKey>Name</TableHeaderColumn>
+    <TableHeaderColumn dataField="guest">Guest</TableHeaderColumn>
+    <TableHeaderColumn dataField="contact">Contact</TableHeaderColumn>
+  </BootstrapTable>
 ));
 
 export default GuestList;

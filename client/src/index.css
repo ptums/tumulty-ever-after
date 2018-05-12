@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 /**
 * Forrest Green: #396f57
 * Forrest Green Light: #60BB93
@@ -13,7 +14,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color:#fefef3;
 }
-
+table {
+  background-color:white !important;
+  margin-bottom: 0rem !important;
+}
 .btn-forest {
   color: #fff;
   background-color: #396f57;
@@ -69,6 +73,7 @@ body {
 .LoveStoryVideo{
   padding:3rem;
 }
+
 
 @media (min-width: 992px) {
   .offset-lg-1 {
