@@ -1,7 +1,5 @@
 'use strict';
 
-var _schema = require('./schema');
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
@@ -10,8 +8,14 @@ var _require = require('apollo-server-express'),
     graphqlExpress = _require.graphqlExpress,
     graphiqlExpress = _require.graphiqlExpress;
 
+var _require2 = require('./schema'),
+    schema = _require2.schema;
+
 // Initialize the app
+
+
 var app = express();
+var port = process.env.PORT || 3001;
 
 // Enable CORS
 var corsOptions = {
@@ -21,12 +25,12 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 // The GraphQL endpoint
-app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: _schema.schema }));
+app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Start the server
-app.listen(3001, function () {
+app.listen(port, function () {
   console.log('Go to http://localhost:3001/graphiql to run queries!');
 });

@@ -5,8 +5,8 @@
 // or   var uri = process.env.MONGO_URL
 
 var url = require('url')
+var uri = 'mongodb://rp1:peterpeter12@ds121950.mlab.com:21950/weddingsite';
 
-var uri = 'mongodb://127.0.0.1:27017/weddingguests';
 if (!uri) {
   throw new Error(
     '\033[31mYou need to provide the connection string. ' +
