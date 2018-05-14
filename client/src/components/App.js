@@ -8,7 +8,7 @@ import GuestList from './private/GuestList';
 import LoginModal from './LoginModal';
 import LoveStoryVideo from './LoveStoryVideo';
 import PhotoGallery from './PhotoGallery';
-import rpFeatured from '../media/original.png';
+import rpFeatured from '../media/original-family.png';
 
 class App extends Component {
   constructor(props) {
