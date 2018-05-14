@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { schema } = require('./schema');
 
@@ -21,6 +22,11 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema }));
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
+// serve up react app under home route
+app.get('/', (req, res) => {
+  app.use(express.static(__dirname + '../client/build/'));
+  res.sendFile(__dirname + '../client/build/index.html');
+});
 // Start the server
 app.listen(port, () => {
   console.log('Go to http://localhost:3001/graphiql to run queries!');
