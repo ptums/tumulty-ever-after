@@ -33,7 +33,8 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // serve up react app under home route
 app.get('*', function (req, res) {
-  var index = path.join('/app', 'client/build', 'index.html');
+  app.use(express.static('client/build'));
+  var index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
 });
 // Start the server
