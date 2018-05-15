@@ -36,7 +36,7 @@ app.get('*', function (req, res) {
   app.use(bodyParser.json());
   app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
   app.use(bodyParser.urlencoded({ extended: true }));
-  app.use(express.static('client/build'));
+  app.use(express.static('client/build/static'));
   var index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
 });
