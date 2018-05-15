@@ -33,6 +33,9 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // serve up react app under home route
 app.get('*', function (req, res) {
+  app.use(bodyParser.json());
+  app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use(express.static('client/build'));
   var index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
