@@ -32,9 +32,9 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // serve up react app under home route
-app.get('/', function (req, res) {
-  app.use(express.static(path.join(__dirname, '/../client/build/')));
-  res.sendFile(path.join(__dirname, '/../client/build/index.html'));
+app.get('*', function (req, res) {
+  var index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
 });
 // Start the server
 app.listen(port, function () {
