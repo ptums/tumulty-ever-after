@@ -24,7 +24,7 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // serve up react app under home route
 app.get('*', (req, res) => {
-  const index = path.join(__dirname, 'build', 'index.html');
+  const index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
 });
 // Start the server
