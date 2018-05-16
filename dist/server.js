@@ -19,12 +19,13 @@ var app = express();
 var port = process.env.PORT || 3001;
 
 // Enable CORS
-var corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials: true
-};
+// http://localhost:3000
+// const corsOptions = {
+//   origin: 'https://mysterious-plateau-10614.herokuapp.com',
+//   credentials: true,
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 // The GraphQL endpoint
 app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
 
