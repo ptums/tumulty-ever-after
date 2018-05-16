@@ -64,16 +64,15 @@ class App extends Component {
             <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 body-content">
               <div className="card">
                 <img className="card-image-top img-fluid mb-1" src={rpFeatured} alt="rachel peter header" />
+                <h1 className="text-center save-the-date-title">Save The Date!</h1>
                 <FaPlusSquareO onClick={() => this.openModal()} />
-                <h1 className="text-center mt-5 mb-2">Our Love Story!</h1>
+                <h1 className="text-center mb-2">Our Love Story!</h1>
                 <LoginModal
                   visible={this.state.visible}
                   closeModal={this.closeModal}
                   authenticateUser={this.authenticateUser}
                 />
                 <LoveStoryVideo />
-                <PhotoGallery />
-                <h2 className="text-center mt-5 mb-1">Save The Date!</h2>
                 <AddGuest />
               </div>
             </div>

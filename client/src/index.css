@@ -64,7 +64,21 @@ table {
 .LoveStoryVideo, .PhotoGallery{
   padding:3rem;
 }
-
+.image-gallery {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.slider-image { 
+  width:400px;
+  max-height:400px;
+}
+.save-the-date-title {
+  position:relative;
+  top: -4rem;
+  text-shadow: 3px 2px 3px black;
+  color: white !important;
+  font-weight: normal !important;
+}
 
 @media (min-width: 992px) {
   .offset-lg-1 {

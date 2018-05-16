@@ -6,8 +6,6 @@ const PhotoGallery = () => {
   return (
     <ImageGallery
       items={SliderImages.sort(() => Math.random() - 0.5)}
-      sizes={200}
-      lazyLoad
       autoPlay
       showFullscreenButton={false}
       showPlayButton={false}

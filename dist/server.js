@@ -19,22 +19,20 @@ var app = express();
 var port = process.env.PORT || 3001;
 
 // Enable CORS
-// http://localhost:3000
-// const corsOptions = {
-//   origin: 'https://mysterious-plateau-10614.herokuapp.com',
-//   credentials: true,
-// }
+var corsOptions = {
+  origin: 'https://mysterious-plateau-10614.herokuapp.com',
+  credentials: true
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
+
 // The GraphQL endpoint
 app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
-app.use(bodyParser.json());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-app.use(bodyParser.urlencoded({ extended: true }));
+// Load static resources for the client
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // serve up react app under home route
@@ -42,7 +40,8 @@ app.get('*', function (req, res) {
   var index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
 });
+
 // Start the server
 app.listen(port, function () {
-  console.log('Go to http://localhost:3001/graphiql to run queries!');
+  console.log('Go to https://mysterious-plateau-10614.herokuapp.com/graphiql to run queries!');
 });
