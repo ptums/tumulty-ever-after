@@ -27,12 +27,12 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // serve up react app under home route
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   const index = path.join(__dirname, '../client/build', 'index.html');
   res.sendFile(index);
 });
 
 // Start the server
 app.listen(port, () => {
-  console.log('Go to https://mysterious-plateau-10614.herokuapp.com/graphiql to run queries!');
+  console.log('Go to https://mysterious-plateau-10614.herokuapp.com/graphiql to run queries!!');
 });

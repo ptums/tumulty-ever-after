@@ -7,7 +7,6 @@ import AddGuest from './AddGuest';
 import GuestList from './private/GuestList';
 import LoginModal from './LoginModal';
 import LoveStoryVideo from './LoveStoryVideo';
-import PhotoGallery from './PhotoGallery';
 import rpFeatured from '../media/original-family.png';
 
 class App extends Component {
@@ -82,18 +81,7 @@ class App extends Component {
     }
     return (
       <div className="App container">
-        <div className="row">
-          <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 body-content">
-            <h1 className="float-left">GUEST LIST</h1>
-            <div className="float-right">
-              <input type="button" className="btn btn-info mr-1" value="Download" />
-              <input type="button" className="btn btn-danger" value="Sign Out" onClick={() => this.unAuthenticateUser(sessionId)} />
-            </div>
-          </div>
-          <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 body-content">
-            <GuestList />
-          </div>
-        </div>
+        <GuestList unAuthenticateUser={this.unAuthenticateUser} sessionId={sessionId}/>
       </div>
     );
   }
