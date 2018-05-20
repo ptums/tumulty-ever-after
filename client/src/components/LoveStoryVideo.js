@@ -1,13 +1,8 @@
 import React from 'react';
-import { Player, BigPlayButton, LoadingSpinner } from 'video-react';
-import loveStoryVideo from '../media/LOVESTORY.mov'
 
 const LoveStoryVideo = () => (
   <div className="LoveStoryVideo">
-    <Player src={loveStoryVideo}> 
-      <BigPlayButton position="center" />
-      <LoadingSpinner />
-    </Player>
+    <iframe src="https://player.vimeo.com/video/270889689" title="Rachel & Peter video" width="640" height="360" className="aligncenter" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen/>
   </div>
 );
 
