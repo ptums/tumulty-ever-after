@@ -20,14 +20,14 @@ var port = process.env.PORT || 3001;
 
 // Enable CORS
 var corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: 'https://mysterious-plateau-10614.herokuapp.com',
   credentials: true
 };
 
 app.use(cors(corsOptions));
 
 // The GraphQL endpoint
-app.get('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
+app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
