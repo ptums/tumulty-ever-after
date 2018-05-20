@@ -64,6 +64,11 @@ table {
 .LoveStoryVideo, .PhotoGallery{
   padding:3rem;
 }
+.LoveStoryVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .image-gallery {
   margin-left: 1rem;
   margin-right: 1rem;
