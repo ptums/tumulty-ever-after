@@ -32,6 +32,9 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
+// Allow root domain to use GraphQL
+app.use('/', graphiqlExpress({ endpointURL: '/graphql' }));
+
 // Load static resources for the client
 app.use(express.static(path.join(__dirname, '../client/build')));
 
