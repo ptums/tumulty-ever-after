@@ -33,7 +33,7 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Allow root domain to use GraphQL
-app.use('/', graphiqlExpress({ endpointURL: '/graphql' }));
+app.use('/data', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Load static resources for the client
 app.use(express.static(path.join(__dirname, '../client/build')));

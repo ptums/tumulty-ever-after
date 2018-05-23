@@ -11,7 +11,7 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
 import App from './components/App';
 
-const httpLink = createHttpLink({ uri: '/', credentials: 'same-origin' });
+const httpLink = createHttpLink({ uri: '/data', credentials: 'same-origin' });
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('token');
