@@ -20,7 +20,7 @@ var port = process.env.PORT || 3001;
 
 // Enable CORS
 var corsOptions = {
-  origin: 'http://www.tumultyeverafter.com',
+  origin: 'http://www.tumultyeverafter.com/',
   credentials: true
 };
 
@@ -43,5 +43,5 @@ app.get('/', function (req, res) {
 
 // Start the server
 app.listen(port, function () {
-  console.log('Go to http://www.tumultyeverafter.com to run queries!!');
+  console.log('Go to http://www.tumultyeverafter.com/ to run queries!!');
 });
