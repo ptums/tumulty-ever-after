@@ -12,10 +12,9 @@ import './index.css';
 import App from './components/App';
 
 const httpLink = createHttpLink({ uri: 'https://mysterious-plateau-10614.herokuapp.com/' });
-console.log(httpLink);
+
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('token');
-
   return {
     headers: {
       ...headers,

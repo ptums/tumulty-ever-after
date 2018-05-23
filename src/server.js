@@ -9,13 +9,8 @@ const { schema } = require('./schema');
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Enable CORS
-const corsOptions = {
-  origin: 'https://mysterious-plateau-10614.herokuapp.com/',
-  credentials: true,
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // The GraphQL endpoint
 app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema }));
