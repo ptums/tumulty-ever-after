@@ -60,7 +60,7 @@ class App extends Component {
       return (
         <div className="App container">
           <div className="row">
-            <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 body-content">
+            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 body-content">
               <div className="card">
                 <img className="card-image-top img-fluid mb-1" src={rpFeatured} alt="rachel peter header" />
                 <h1 className="text-center save-the-date-title">Save The Date <em><small>- 03/30/19</small></em></h1>
