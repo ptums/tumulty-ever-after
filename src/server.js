@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 
 // Enable CORS
 const corsOptions = {
-  origin: 'tumultyeverafter.com/',
+  origin: 'www.tumultyeverafter.com/',
   credentials: true,
 };
 
