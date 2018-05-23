@@ -25,8 +25,9 @@ table {
   margin: none;
 }
 .App > .row > .body-content > .card > svg {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   color:brown;
+  float:right;
 }
 .App > .row > .body-content > .card > svg:hover {
   cursor: pointer;
