@@ -61,10 +61,10 @@ class App extends Component {
         <div className="App container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 body-content">
+              <FaPlusSquareO onClick={() => this.openModal()} />
               <div className="card">
                 <img className="card-image-top img-fluid mb-1" src={rpFeatured} alt="rachel peter header" />
                 <h1 className="text-center save-the-date-title">Save The Date <em><small>- 03/30/19</small></em></h1>
-                <FaPlusSquareO onClick={() => this.openModal()} />
                 <h1 className="text-center mb-2">Our Love Story!</h1>
                 <LoginModal
                   visible={this.state.visible}

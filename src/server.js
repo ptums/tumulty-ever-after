@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 
 // Enable CORS
 const corsOptions = {
-  origin: 'http://www.tumultyeverafter.com',
+  origin: 'https://mysterious-plateau-10614.herokuapp.com',
   credentials: true,
 };
 

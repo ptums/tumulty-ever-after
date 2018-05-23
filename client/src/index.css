@@ -25,10 +25,7 @@ table {
   margin: none;
 }
 .App > .row > .body-content > .card > svg {
-  position: absolute;
-  right: -15%;
-  font-size: 1.8rem;
-  color:brown;
+
 }
 .App > .row > .body-content > .card > svg:hover {
   cursor: pointer;
