@@ -20,7 +20,7 @@ var port = process.env.PORT || 3001;
 
 // Enable CORS
 var corsOptions = {
-  origin: 'http://www.tumultyeverafter.com/',
+  origin: 'tumultyeverafter.com/',
   credentials: true
 };
 
