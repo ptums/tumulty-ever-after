@@ -9,6 +9,16 @@ const { schema } = require('./schema');
 const app = express();
 const port = process.env.PORT || 3001;
 
+const helperMiddleware = [
+  bodyParser.json(),
+  bodyParser.text({ type: 'application/graphql' }),
+  (req, res, next) => {
+    if (req.is('application/graphql')) {
+      req.body = { query: req.body };
+    }
+    next();
+  },
+];
 
 // enable cors
 const corsOptions = {
@@ -19,7 +29,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // The GraphQL endpoint
-app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema }));
+app.use('/graphql', cors(), ...helperMiddleware, graphqlExpress({ schema }));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));

@@ -18,6 +18,13 @@ var _require2 = require('./schema'),
 var app = express();
 var port = process.env.PORT || 3001;
 
+var helperMiddleware = [bodyParser.json(), bodyParser.text({ type: 'application/graphql' }), function (req, res, next) {
+  if (req.is('application/graphql')) {
+    req.body = { query: req.body };
+  }
+  next();
+}];
+
 // enable cors
 var corsOptions = {
   origin: 'https://mysterious-plateau-10614.herokuapp.com/',
@@ -27,7 +34,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 // The GraphQL endpoint
-app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: schema }));
+app.use.apply(app, ['/graphql', cors()].concat(helperMiddleware, [graphqlExpress({ schema: schema })]));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
