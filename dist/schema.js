@@ -12,7 +12,7 @@ var Guests = require('../models/Guests');
 var Users = require('../models/Users');
 
 // The GraphQL schema in string form
-var typeDefs = '\n  type Query { guests: [Guest], users: [Users] }\n  type Mutation { addGuest(name: String, guest: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users }\n  type Guest { _id: String, name: String, guest: String, contact: String }\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n';
+var typeDefs = '\n  type Query { guests: [Guest], users: [Users] }\n  type Mutation { addGuest(name: String, guest: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users }\n  type Guest { _id: String, name: String, email: String, contact: String }\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n';
 
 // The resolvers
 var resolvers = {

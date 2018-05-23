@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 
 // Enable CORS
 const corsOptions = {
-  origin: 'https://mysterious-plateau-10614.herokuapp.com',
+  origin: 'http://www.tumultyeverafter.com',
   credentials: true,
 };
 
@@ -34,5 +34,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log('Go to https://mysterious-plateau-10614.herokuapp.com/graphiql to run queries!!');
+  console.log('Go to http://www.tumultyeverafter.com to run queries!!');
 });

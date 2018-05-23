@@ -9,7 +9,7 @@ const GUEST_LIST = gql`
 query {
   guests {
     name,
-    guest,
+    email,
     contact
   }
 }

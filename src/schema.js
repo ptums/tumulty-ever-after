@@ -7,7 +7,7 @@ const Users = require('../models/Users');
 const typeDefs = `
   type Query { guests: [Guest], users: [Users] }
   type Mutation { addGuest(name: String, guest: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users }
-  type Guest { _id: String, name: String, guest: String, contact: String }
+  type Guest { _id: String, name: String, email: String, contact: String }
   type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }
   schema { query: Query, mutation: Mutation }
 `;

@@ -84,6 +84,10 @@ table {
   color: white !important;
   font-weight: normal !important;
 }
+.save-the-date-title > em > small {
+  font-size: 70%;
+  color: #FFF9E5;
+}
 
 @media (min-width: 992px) {
   .offset-lg-1 {
