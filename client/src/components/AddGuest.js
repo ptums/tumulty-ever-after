@@ -59,7 +59,7 @@ const AddGuest = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Emaill:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 className="form-control"
                 type="text"
