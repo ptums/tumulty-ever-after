@@ -1,5 +1,7 @@
 'use strict';
 
+var _schema = require('./schema');
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
@@ -9,38 +11,24 @@ var _require = require('apollo-server-express'),
     graphqlExpress = _require.graphqlExpress,
     graphiqlExpress = _require.graphiqlExpress;
 
-var _require2 = require('./schema'),
-    schema = _require2.schema;
-
 // Initialize the app
 
 
 var app = express();
 var port = process.env.PORT || 3001;
 
-var helperMiddleware = [bodyParser.json(), bodyParser.text({ type: 'application/graphql' }), function (req, res, next) {
-  if (req.is('application/graphql')) {
-    req.body = { query: req.body };
-  }
-  next();
-}];
-
-// enable cors
+// Enable CORS
 var corsOptions = {
-  origin: 'https://mysterious-plateau-10614.herokuapp.com/',
+  origin: 'https://mysterious-plateau-10614.herokuapp.com',
   credentials: true
 };
 
 app.use(cors(corsOptions));
-
 // The GraphQL endpoint
-app.use.apply(app, ['/graphql', cors()].concat(helperMiddleware, [graphqlExpress({ schema: schema })]));
+app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema: _schema.schema }));
 
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
-
-// Allow root domain to use GraphQL
-app.use('/data', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Load static resources for the client
 app.use(express.static(path.join(__dirname, '../client/build')));
@@ -53,5 +41,5 @@ app.get('/', function (req, res) {
 
 // Start the server
 app.listen(port, function () {
-  console.log('Go to http://www.tumultyeverafter.com/ to run queries!!');
+  console.log('Go to http://localhost:3001 to run queries!!');
 });

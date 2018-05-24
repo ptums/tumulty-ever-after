@@ -6,7 +6,7 @@ const ADD_GUEST = gql`
 mutation addGuest($name: String, $guest: String, $contact: String) {
     addGuest(name: $name, guest: $guest, contact: $contact) {
       name,
-      guest,
+      email,
       contact
     }
   }
@@ -32,7 +32,7 @@ const AddGuest = () => {
       update={(cache, { data: addGuest }) => {
         try {
          const { guests } = cache.readQuery({ query: GUEST_LIST });
-         cache.writeQuery({ query: GUEST_LIST, data: { guests: guests.concat([addGuest]) }})
+         cache.writeQuery({ query: GUEST_LIST, data: { guests: guests.concat([addGuest]) } });
         } catch (e) {
           return false;
         }
