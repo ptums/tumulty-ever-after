@@ -10,7 +10,7 @@ import 'video-react/dist/video-react.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
 import App from './components/App';
-
+// http://www.tumultyeverafter.com
 const httpLink = createHttpLink({ uri: 'http://www.tumultyeverafter.com/graphql', credentials: 'same-origin' });
 
 const authLink = setContext((_, { headers }) => {
