@@ -1,6 +1,6 @@
 import { createApolloFetch } from 'apollo-fetch';
 
-const uri = 'http://localhost:3001/graphql';
+const uri = 'http://www.tumultyeverafter.com/graphql';
 const apolloFetch = createApolloFetch({ uri });
 
 const query = `
