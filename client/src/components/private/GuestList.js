@@ -29,7 +29,7 @@ const GuestList = graphql(GUEST_LIST)((props) => {
       <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12 body-content">
         <BootstrapTable data={data.guests} height="150" scrollTop="Bottom">
           <TableHeaderColumn dataField="name" isKey>Name</TableHeaderColumn>
-          <TableHeaderColumn dataField="guest">Guest</TableHeaderColumn>
+          <TableHeaderColumn dataField="email">Email</TableHeaderColumn>
           <TableHeaderColumn dataField="contact">Contact</TableHeaderColumn>
         </BootstrapTable>
       </div>
