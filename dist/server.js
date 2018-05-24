@@ -19,7 +19,7 @@ var port = process.env.PORT || 3001;
 
 // Enable CORS
 var corsOptions = {
-  origin: 'https://mysterious-plateau-10614.herokuapp.com',
+  origin: 'http://www.tumultyeverafter.com',
   credentials: true
 };
 
@@ -41,5 +41,5 @@ app.get('/', function (req, res) {
 
 // Start the server
 app.listen(port, function () {
-  console.log('Go to http://localhost:3001 to run queries!!');
+  console.log('Go to tumultyeverafter.com to run queries!!');
 });
