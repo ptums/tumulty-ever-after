@@ -37,7 +37,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route exact path="/private/create" component={Create} />
+        <Route exact path="/create" component={Create} />
       </Switch>
     </BrowserRouter>
   </ApolloProvider>,
