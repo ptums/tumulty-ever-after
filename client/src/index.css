@@ -23,12 +23,12 @@ table {
 .App { 
   margin: none;
 }
-.App > .row > .body-content > .card > svg {
+.App > .row > .body-content > svg {
   font-size: 1.75rem;
   color:brown;
   float:right;
 }
-.App > .row > .body-content > .card > svg:hover {
+.App > .row > .body-content > svg:hover {
   cursor: pointer;
   color:chocolate;
 }

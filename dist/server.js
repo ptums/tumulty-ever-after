@@ -41,5 +41,5 @@ app.get('/', function (req, res) {
 
 // Start the server
 app.listen(port, function () {
-  console.log('Go to tumultyeverafter.com to run queries!!');
+  console.log(' Server running on: ' + port);
 });

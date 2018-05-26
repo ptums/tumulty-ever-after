@@ -25,7 +25,7 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Load static resources for the client
- app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // serve up react app under home route
 app.get('/', (req, res) => {
@@ -35,5 +35,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log('Go to tumultyeverafter.com to run queries!!');
+  console.log(` Server running on: ${port}`);
 });

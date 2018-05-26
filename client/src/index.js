@@ -5,12 +5,14 @@ import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
 import { setContext } from 'apollo-link-context';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'video-react/dist/video-react.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
 import App from './components/App';
-// http://www.tumultyeverafter.com
+import Create from './components/Create';
+
 const httpLink = createHttpLink({ uri: 'http://www.tumultyeverafter.com/graphql', credentials: 'same-origin' });
 
 const authLink = setContext((_, { headers }) => {
@@ -32,7 +34,12 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route exact path="/private/create" component={Create} />
+      </Switch>
+    </BrowserRouter>
   </ApolloProvider>,
   document.getElementById('root'),
 );

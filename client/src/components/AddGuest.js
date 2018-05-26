@@ -3,8 +3,8 @@ import { Mutation } from 'react-apollo';
 import { gql } from 'apollo-boost';
 
 const ADD_GUEST = gql`
-mutation addGuest($name: String, $guest: String, $contact: String) {
-    addGuest(name: $name, guest: $guest, contact: $contact) {
+mutation addGuest($name: String, $email: String, $contact: String) {
+    addGuest(name: $name, email: $email, contact: $contact) {
       name,
       email,
       contact
