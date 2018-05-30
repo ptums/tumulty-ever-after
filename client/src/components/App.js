@@ -67,7 +67,8 @@ class App extends Component {
                 <h1 className="text-center mt-3">Save The Date!</h1>
                 <h3 className="text-center mt-2 final-fold-message"><small>Celebrate love, laughter, and happily ever after!</small></h3>
                 <h3 className="text-center final-fold-message"><small>Save the date because Peter and Rachel are getting married</small></h3>
-                <h4 className="text-center final-fold-message"><strong>03/03/2019 Dayton, NJ</strong></h4>
+                <h4 className="text-center final-fold-message"><strong>03/30/2019 Dayton, NJ</strong></h4>
+
                 <h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
                 <h1 className="text-center mt-4">Our Love Story</h1>
                 <LoveStoryVideo />
