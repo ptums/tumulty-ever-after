@@ -76,7 +76,7 @@ class App extends Component {
                 <h1 className="text-center mt-3">Contact Us</h1>
 
                 <h5 class="text-center final-fold-message">Any questions, comments, just want to say hello? Send us an email<br/>at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a></h5>
-                <h6 class="text-center mb-4 mt-2 final-fold-message">Looking for our registry? Check out our Zola site <a href="https://zola.com">here.</a></h6>
+                <h6 class="text-center mb-4 mt-2 final-fold-message">Looking for our registry? Check out our Zola site <a href="https://www.zola.com/registry/tumultyeverafter" target="_blank">here.</a></h6>
               </div>
             </div>
           </div>
