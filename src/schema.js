@@ -20,7 +20,6 @@ const resolvers = {
   },
   Mutation: {
     addGuest: async (root, args) => {
-      console.log(args);
       const res = await Guests.create(args);
       return Guests.findOne({ _id: res._id });
     },

@@ -91,6 +91,34 @@ table {
   font-size: 70%;
   color: #FFF9E5;
 }
+.SelectionGrid {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cell {
+  width: 50%;
+  height:auto;
+}
+.cell-image {
+  max-width:50%;
+}
+.cell-content {
+  text-align: center;
+}
+.cell-1 > .cell-image, .cell-2 > .cell-image {
+  float:left;
+}
+.cell-3 > .cell-image, .cell-4 > .cell-image {
+  float:right;
+}
+.cell-5 > .cell-image, .cell-6 > .cell-image {
+  float:left;
+}
+.cell-content p {
+ width: 324px;
+}
 
 @media (min-width: 992px) {
   .offset-lg-1 {

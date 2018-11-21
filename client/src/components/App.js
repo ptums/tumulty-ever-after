@@ -7,6 +7,7 @@ import AddGuest from './AddGuest';
 import GuestList from './private/GuestList';
 import LoginModal from './LoginModal';
 import LoveStoryVideo from './LoveStoryVideo';
+import SelectionGrid from './SelectionGrid';
 import rpFeatured from '../media/original-family.png';
 
 class App extends Component {
@@ -71,9 +72,8 @@ class App extends Component {
 
                 <h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
                 <h1 className="text-center mt-4">Our Love Story</h1>
-                <LoveStoryVideo />
-                <h3 class="text-center final-fold-message"><small>We kindly ask for your contact information<br/>so we best know where to send your invitation.</small></h3>
-                <AddGuest />
+                <LoveStoryVideo /><hr />
+                <SelectionGrid /><hr />
                 <h1 className="text-center mt-3">Contact Us</h1>
 
                 <h5 class="text-center final-fold-message">Any questions, comments, just want to say hello? Send us an email<br/>at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a></h5>
