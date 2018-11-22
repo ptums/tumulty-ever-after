@@ -101,9 +101,12 @@ table {
   width: 50%;
   height:auto;
 }
-.cell:hover {
+.cell:hover, .cell:focus {
+  border-color: rgba(0,0,0,0.2);
+  border-width: 15px;
   cursor: pointer;
 }
+
 .cell-image {
   max-width:50%;
 }
@@ -130,7 +133,11 @@ table {
   float:left;
 }
 
-.shadow {box-shadow:0 0 0 10px rgba(0,0,0,0.5) inset; cursor: pointer;}
+.shadow {
+  box-shadow:0 0 0 10px rgba(0,0,0,0.5) inset;
+  cursor: pointer;
+}
+
 
 @media (min-width: 992px) {
   .offset-lg-1 {
