@@ -12,6 +12,12 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
 import App from './components/App';
 import Create from './components/Create';
+import ScheduleEvents from './components/pages/ScheduleEvents';
+import RSVP from './components/pages/RSVP';
+import AboutUs from './components/pages/AboutUs';
+import Accomodations from './components/pages/Accomodations';
+import Registry from './components/pages/Registry';
+import Transportation from './components/pages/Transportation';
 
 const httpLink = createHttpLink({ uri: 'http://www.tumultyeverafter.com/graphql', credentials: 'same-origin' });
 
@@ -38,6 +44,12 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/create" component={Create} />
+        <Route exact path="/schedule-events" component={ScheduleEvents} />
+        <Route exact path="/rsvp" component={RSVP} />
+        <Route exact path="/about-us" component={AboutUs} />
+        <Route exact path="/accomodations" component={Accomodations} />
+        <Route exact path="/registry" component={Registry} />
+        <Route exact path="/transportation" component={Transportation} />
       </Switch>
     </BrowserRouter>
   </ApolloProvider>,

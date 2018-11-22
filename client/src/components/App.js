@@ -72,8 +72,8 @@ class App extends Component {
 
                 <h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
                 <h1 className="text-center mt-4">Our Love Story</h1>
-                <LoveStoryVideo /><hr />
-                <SelectionGrid /><hr />
+                <LoveStoryVideo />
+                <SelectionGrid />
                 <h1 className="text-center mt-3">Contact Us</h1>
 
                 <h5 class="text-center final-fold-message">Any questions, comments, just want to say hello? Send us an email<br/>at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a></h5>
