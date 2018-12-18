@@ -1,7 +1,7 @@
-const { makeExecutableSchema } = require('graphql-tools');
-const randomToken = require('random-token');
-const Guests = require('../models/Guests');
-const Users = require('../models/Users');
+const { makeExecutableSchema } = require("graphql-tools");
+const randomToken = require("random-token");
+const Guests = require("../models/Guests");
+const Users = require("../models/Users");
 
 // The GraphQL schema in string form
 const typeDefs = `
