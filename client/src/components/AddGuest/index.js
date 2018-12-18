@@ -1,6 +1,7 @@
-import React from 'react';
-import { Mutation } from 'react-apollo';
-import { gql } from 'apollo-boost';
+import React from "react";
+import { Mutation } from "react-apollo";
+import { gql } from "apollo-boost";
+import "./index.css";
 
 const ADD_GUEST = gql`
 mutation addGuest($name: String, $email: String, $contact: String) {

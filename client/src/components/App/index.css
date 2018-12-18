@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color:#fefef3;
+}
+table {
+  background-color:white !important;
+  margin-bottom: 0rem !important;
+}
+.btn-forest {
+  color: #fff;
+  background-color: #396f57;
+  border-color: #396f57;
+}
+.btn-forest:hover {
+  background-color:#60BB93;
+  border-color:#60BB93;
+}
+.container > .card {
+  margin:0rem;
+}
+.App { 
+  margin: none;
+}
+.App > .row > .body-content > svg {
+  font-size: 1.75rem;
+  color:brown;
+  float:right;
+}
+.App > .row > .body-content > svg:hover {
+  cursor: pointer;
+  color:chocolate;
+}
+.App > .row > .body-content > .card {
+  box-shadow: 0px 1px 15px #e1dc9b;
+  border-radius:10px;
+}
+.App > .row > .body-content > .card > .card-image-top {
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+.App > .row > .body-content > .card > h1, h2 {
+  font-weight: 900;
+  color: #396f57;
+}
+.save-the-date-title {
+  position:relative;
+  top: -4rem;
+  text-shadow: 3px 2px 3px black;
+  color: white !important;
+  font-weight: normal !important;
+}
+.final-fold-message {
+  font-family: 'Playfair Display', serif;
+}
+.save-the-date-title > em > small {
+  font-size: 70%;
+  color: #FFF9E5;
+}
+.mt-6 {
+  margin-top:5rem;
+}
+
+@media (min-width: 992px) {
+  .offset-lg-1 {
+    margin-left: 10.333333%;
+  }
+  .App { 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  } 
+}
+
+@media (max-width: 992px) {
+  .App > .icon-border > svg {
+   display:none;
+ }
+}

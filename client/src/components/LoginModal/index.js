@@ -1,8 +1,9 @@
-import React from 'react';
-import Modal from 'react-awesome-modal';
-import PropTypes from 'prop-types';
-import { Mutation } from 'react-apollo';
-import { gql } from 'apollo-boost';
+import React from "react";
+import Modal from "react-awesome-modal";
+import PropTypes from "prop-types";
+import { Mutation } from "react-apollo";
+import { gql } from "apollo-boost";
+import "./index.css";
 
 const AUTH_USER = gql`
 mutation authUser($username: String, $password: String ) {

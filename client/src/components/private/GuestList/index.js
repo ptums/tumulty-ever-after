@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql } from 'react-apollo';
-import { gql } from 'apollo-boost';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import DownloadGuestList from './DownloadGuestList';
+import React from "react";
+import { graphql } from "react-apollo";
+import { gql } from "apollo-boost";
+import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
+import DownloadGuestList from "../DownloadGuestList/";
 
 
 const GUEST_LIST = gql`

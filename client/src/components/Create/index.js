@@ -1,6 +1,6 @@
-import React from 'react';
-import { Mutation } from 'react-apollo';
-import { gql } from 'apollo-boost';
+import React from "react";
+import { Mutation } from "react-apollo";
+import { gql } from "apollo-boost";
 
 const ADD_USER = gql`
 mutation addUser($username: String, $password: String) {

@@ -1,0 +1,47 @@
+
+.SelectionGrid {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cell {
+  width: 50%;
+  height:auto;
+  transition: border background-color 0.1s ease-in;
+}
+.cell:hover, .cell:focus {
+  border: 8px solid #396f57;
+  cursor: pointer;
+}
+
+.cell-image {
+  max-width:50%;
+}
+.cell-content {
+  width: 50%;
+  text-align: center;
+  margin-top: 10em;
+}
+.cell-content h3 {
+  color: #396f57;
+  font-weight: 800;
+}
+.cell > a > .cell-content >  p {
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+.cell-1 > a > .cell-image, .cell-2 > a > .cell-image, .cell-1 > a >.cell-content, .cell-2 > a > .cell-content {
+  float:left;
+}
+.cell-3 > a >.cell-image, .cell-4 > a >.cell-image, .cell-3 > a > .cell-content, .cell-4 > a > .cell-content {
+  float:right;
+}
+.cell-5 > a > .cell-image, .cell-6 > a > .cell-image, .cell-5 > a > .cell-content, .cell-6 > a > .cell-content {
+  float:left;
+}
+
+.shadow {
+  box-shadow:0 0 0 10px rgba(0,0,0,0.5) inset;
+  cursor: pointer;
+}

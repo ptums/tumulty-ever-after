@@ -1,0 +1,11 @@
+.PhotoGallery{
+  padding:3rem;
+}
+.image-gallery {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.slider-image { 
+  width:400px;
+  max-height:400px;
+}
