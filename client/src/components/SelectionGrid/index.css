@@ -6,12 +6,14 @@
   justify-content: flex-start;
 }
 .cell {
-  width: 50%;
+  width: 49%;
   height:auto;
-  transition: border background-color 0.1s ease-in;
+  margin:5px;
+  transition: border .4s ease;
+  border: .2px solid #e9e9e9;
 }
 .cell:hover, .cell:focus {
-  border: 8px solid #396f57;
+  border: 10px solid #396f57;
   cursor: pointer;
 }
 
@@ -21,7 +23,7 @@
 .cell-content {
   width: 50%;
   text-align: center;
-  margin-top: 10em;
+  margin-top: 8em;
 }
 .cell-content h3 {
   color: #396f57;
