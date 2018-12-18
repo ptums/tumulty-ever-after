@@ -3,6 +3,7 @@ import { Mutation } from "react-apollo";
 import { gql } from "apollo-boost";
 import "./index.css";
 
+// add a guest mutation query
 const ADD_GUEST = gql`
 mutation addGuest($name: String, $email: String, $contact: String) {
     addGuest(name: $name, email: $email, contact: $contact) {
@@ -13,6 +14,7 @@ mutation addGuest($name: String, $email: String, $contact: String) {
   }
 `;
 
+// results query for guest list
 const GUEST_LIST = gql`
 query {
   guests {
@@ -27,6 +29,8 @@ const AddGuest = () => {
   let name;
   let email;
   let contact;
+  // Mutation component to execute add guest 
+  // to database
   return (
     <Mutation
       mutation={ADD_GUEST}

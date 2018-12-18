@@ -18,6 +18,8 @@ class App extends Component {
       visible: false,
       sessionId: null,
     };
+
+    // bind all methods to DOM
     this.closeModal = this.closeModal.bind(this);
     this.authenticateUser = this.authenticateUser.bind(this);
     this.unAuthenticateUser = this.unAuthenticateUser.bind(this);
@@ -27,11 +29,13 @@ class App extends Component {
       this.setCookie();
     }
   }
+  // set user cookie to state as a session id 
   setCookie() {
     let catId = document.cookie.split(";");
     catId = catId[0].split("=").pop();
     this.setState({ sessionId: catId });
   }
+  // set session id to state and save it as a cookie
   authenticateUser() {
     authUser().then(data => data[0]).then((results) => {
       if (typeof results !== "undefined") {
@@ -43,15 +47,18 @@ class App extends Component {
       }
     });
   }
+  // remove the session id 
   unAuthenticateUser(id) {
     unAuthUser(id).then(() => {
       cookie.remove("sessionId", { path: "/" });
       this.setState({ sessionId: null });
     });
   }
+  // open modal by setting visible state to true 
   openModal() {
     this.setState({ visible: true });
   }
+  // close modal by setting visible state to false 
   closeModal() {
     this.setState({ visible: false });
   }

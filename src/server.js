@@ -6,7 +6,6 @@ const cors = require("cors");
 const path = require("path");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
 
-
 // Initialize the app
 const app = express();
 const port = process.env.PORT || 3001;
@@ -17,7 +16,9 @@ const corsOptions = {
   credentials: true,
 };
 
+// Allow CORS between routes
 app.use(cors(corsOptions));
+
 // The GraphQL endpoint
 app.use("/graphql", cors(), bodyParser.json(), graphqlExpress({ schema }));
 
@@ -27,7 +28,7 @@ app.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
 // Load static resources for the client
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-// serve up react app under home route
+// Serve up react app under home route
 app.get("/", (req, res) => {
   const index = path.join(__dirname, "../client/build", "index.html");
   res.sendFile(index);
