@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import cookie from "react-cookies";
 import FaPlusSquareO from "react-icons/lib/fa/plus-square-o";
 import { authUser } from "../../utils/authUser/";
@@ -86,7 +87,7 @@ class App extends Component {
                 <h1 className="text-center mt-6">Contact Us</h1>
 
                 <h5 className="text-center final-fold-message">Any questions, comments, just want to say hello? Send us an email<br/>at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a></h5>
-                <h6 className="text-center mb-4 mt-2 final-fold-message">Looking for our registry? Check out our Zola site <a href="https://www.zola.com/registry/tumultyeverafter" target="_blank">here.</a></h6>
+                <h6 className="text-center mb-4 mt-2 final-fold-message">Looking for our registry? Check out our Zola site <Link to="https://www.zola.com/registry/tumultyeverafter" target="_blank" rel="noopener noreferrer">here.</Link></h6>
               </div>
             </div>
           </div>
