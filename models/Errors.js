@@ -19,11 +19,11 @@ newSchema.pre('save', function(next){
 });
 
 newSchema.pre('update', function() {
-  this.update({}, { $set: { updatedAt: Date.now() } });
+  this.updateOne({}, { $set: { updatedAt: Date.now() } });
 });
 
 newSchema.pre('findOneAndUpdate', function() {
-  this.update({}, { $set: { updatedAt: Date.now() } });
+  this.updateOne({}, { $set: { updatedAt: Date.now() } });
 });
 
 

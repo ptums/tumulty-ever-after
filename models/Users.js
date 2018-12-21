@@ -27,11 +27,11 @@ newSchema.pre('save', function(next){
 });
 
 newSchema.pre('update', function() {
-  this.update({}, { $set: { updatedAt: Date.now() } });
+  this.updateOne({}, { $set: { updatedAt: Date.now() } });
 });
 
 newSchema.pre('findOneAndUpdate', function() {
-  this.update({}, { $set: { updatedAt: Date.now() } });
+  this.updateOne({}, { $set: { updatedAt: Date.now() } });
 });
 
 newSchema.virtual('isLocked').get(function () {
@@ -70,7 +70,7 @@ newSchema.methods.comparePassword = function (candidatePassword, cb) {
 newSchema.methods.incLoginAttempts = function (cb) {
   // if we have a previous lock that has expired, restart at 1
   if (this.lockUntil && this.lockUntil < Date.now()) {
-    return this.update({
+    return this.updateOne({
       $set: { loginAttempts: 1 },
       $unset: { lockUntil: 1 }
     }, cb);
@@ -81,7 +81,7 @@ newSchema.methods.incLoginAttempts = function (cb) {
   if (this.loginAttempts + 1 >= MAX_LOGIN_ATTEMPTS && !this.isLocked) {
     updates.$set = { lockUntil: Date.now() + LOCK_TIME };
   }
-  return this.update(updates, cb);
+  return this.updateOne(updates, cb);
 };
 
 // expose enum on the model, and provide an internal convenience reference 
@@ -124,7 +124,7 @@ newSchema.statics.getAuthenticated = function (username, password, cb) {
           $set: { loginAttempts: 0 },
           $unset: { lockUntil: 1 }
         };
-        return user.update(updates, function (err) {
+        return user.updateOne(updates, function (err) {
           if (err) return cb(err);
           return cb(null, user);
         });

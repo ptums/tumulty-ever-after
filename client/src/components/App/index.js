@@ -4,7 +4,6 @@ import cookie from "react-cookies";
 import FaPlusSquareO from "react-icons/lib/fa/plus-square-o";
 import { authUser } from "../../utils/authUser/";
 import { unAuthUser } from "../../utils/unAuthUser/";
-import AddGuest from "../AddGuest/";
 import GuestList from "../private/GuestList/";
 import LoginModal from "../LoginModal/";
 import LoveStoryVideo from "../LoveStoryVideo/";

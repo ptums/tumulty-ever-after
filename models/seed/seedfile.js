@@ -13,12 +13,41 @@ require('../all-models').toContext(global);
 
 
 // For Example
-
-// CoolUser.create([
-//   { name: 'andy', age: 24 },
-//   { name: 'alex', age: 23 },
-//   { name: Faker.name.firstName(), age: Faker.random.number() }
-// ])
+// link': { type: String },
+  // 'title': { type: String },
+  // 'content': { type: String }
+Pages.create([
+  {
+  	'link': 'about-us',
+    'title': 'About Us',
+    'content': '<h1>About us</h1>' 
+  },
+  {
+  	'link': 'events',
+    'title': 'Events',
+    'content': '<h1>About us</h1>' 
+  },
+  {
+  	'link': 'rsvp',
+    'title': 'RSVP',
+    'content': '<h1>RSVP</h1>' 
+  },
+  {
+  	'link': 'accomodations',
+    'title': 'Accomodations',
+    'content': '<h1>Accomodations</h1>' 
+  },
+  {
+  	'link': 'registry',
+    'title': 'Registry',
+    'content': '<h1>Registry</h1>' 
+  },
+  {
+  	'link': 'transportation',
+    'title': 'Transportation',
+    'content': '<h1>Transportation</h1>' 
+  }
+])
 
 // .then(() => {
 //   console.log("Seed complete!")  

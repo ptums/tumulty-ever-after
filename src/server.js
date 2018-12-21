@@ -1,18 +1,20 @@
 import { schema } from "./schema";
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
+const Pages = require("../models/Pages");
+
 
 // Initialize the app
 const app = express();
 const port = process.env.PORT || 3001;
 
 // Enable CORS
+// http://www.tumultyeverafter.com
 const corsOptions = {
-  origin: "http://www.tumultyeverafter.com",
+  origin: "http://localhost:3000",
   credentials: true,
 };
 

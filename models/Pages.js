@@ -6,10 +6,9 @@ if (mongoose.connection.readyState === 0) {
 
 
 var newSchema = new Schema({
-  
-  'name': { type: String },
-  'email': { type: String },
-  'contact': { type: String },
+  'link': { type: String },
+  'title': { type: String },
+  'content': { type: String },
   'createdAt': { type: Date, default: Date.now },
   'updatedAt': { type: Date, default: Date.now }
 });
@@ -29,4 +28,4 @@ newSchema.pre('findOneAndUpdate', function() {
 
 
 
-module.exports = mongoose.model('Guests', newSchema);
+module.exports = mongoose.model('Pages', newSchema);

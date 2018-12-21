@@ -1,18 +1,19 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _require = require('graphql-tools'),
+var _require = require("graphql-tools"),
     makeExecutableSchema = _require.makeExecutableSchema;
 
-var randomToken = require('random-token');
-var Guests = require('../models/Guests');
-var Users = require('../models/Users');
+var randomToken = require("random-token");
+var Guests = require("../models/Guests");
+var Users = require("../models/Users");
+var Pages = require("../models/Pages");
 
 // The GraphQL schema in string form
-var typeDefs = '\n  type Query { guests: [Guest], users: [Users] }\n  type Mutation { addGuest(name: String, email: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users, addUser(username: String, password: String): Users }\n  type Guest { _id: String, name: String, email: String, contact: String }\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n';
+var typeDefs = "\n  type Query { guests: [Guest], users: [Users], pages: [Page] }\n  type Mutation { addGuest(name: String, email: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users, addUser(username: String, password: String): Users }\n  type Guest { _id: String, name: String, email: String, contact: String }\n  type Page { _id: String, link: String, title: String, content: String }\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n";
 
 // The resolvers
 var resolvers = {
@@ -26,11 +27,15 @@ var resolvers = {
       return Users.find({}, function (err, data) {
         return data;
       });
+    },
+    pages: function pages() {
+      return Pages.find({}, function (err, data) {
+        return data;
+      });
     }
   },
   Mutation: {
     addGuest: async function addGuest(root, args) {
-      console.log(args);
       var res = await Guests.create(args);
       return Guests.findOne({ _id: res._id });
     },
@@ -42,7 +47,7 @@ var resolvers = {
       await Users.getAuthenticated(args.username, args.password, function (err, user, reason) {
         if (err) throw err;
         if (user) {
-          Users.update({ username: user.username }, { authed: true, sessionId: randomToken(16) }, function (data) {
+          Users.updateOne({ username: user.username }, { authed: true, sessionId: randomToken(16) }, function (data) {
             return data;
           });
         }
@@ -63,7 +68,7 @@ var resolvers = {
     },
     unAuthUser: async function unAuthUser(root, args) {
       var argId = await JSON.parse(args._id);
-      return Users.update({ sessionId: argId }, { authed: false, sessionId: 0 }, function (data) {
+      return Users.updateOne({ sessionId: argId }, { authed: false, sessionId: 0 }, function (data) {
         return data;
       });
     }
