@@ -4,22 +4,24 @@
 // or   var uri = config.get('mongo');
 // or   var uri = process.env.MONGO_URL
 
-var url = require('url')
-var uri = 'mongodb://rp1:peterpeter12@ds121950.mlab.com:21950/weddingsite';
+var url = require("url");
+require('dotenv').config();
+
+var uri = `${process.env.MONGO_URL}`;
 
 if (!uri) {
   throw new Error(
-    '\033[31mYou need to provide the connection string. ' +
-    'You can open "models/connection-string.js" and export it or use the "setUri" command.\033[0m'
+    "\033[31mYou need to provide the connection string. " +
+    "You can open 'models/connection-string.js' and export it or use the 'setUri' command.\033[0m"
   );
 }
 
 var uriObj = url.parse(uri)
-if (uriObj.protocol !== 'mongodb:') {
-  throw new Error('Must be a mongodb URI')
+if (uriObj.protocol !== "mongodb:") {
+  throw new Error("Must be a mongodb URI")
 }
 if (!uriObj.host || !uriObj.path) {
-  throw new Error('Improperly formatted URI')
+  throw new Error("Improperly formatted URI")
 }
 
 module.exports = uri;

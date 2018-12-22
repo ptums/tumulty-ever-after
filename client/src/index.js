@@ -33,7 +33,7 @@ const link = authLink.concat(httpLink);
 // Create a variable to bind to the DOM
 const client = new ApolloClient({
   link,
-  cache: new InMemoryCache(),
+ cache: new InMemoryCache(),
 });
 
 // Create routes, bind client to Apollo

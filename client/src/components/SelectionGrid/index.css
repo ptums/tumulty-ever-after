@@ -42,8 +42,45 @@
 .cell-5 > a > .cell-image, .cell-6 > a > .cell-image, .cell-5 > a > .cell-content, .cell-6 > a > .cell-content {
   float:left;
 }
-
 .shadow {
   box-shadow:0 0 0 10px rgba(0,0,0,0.5) inset;
   cursor: pointer;
 }
+/** Mobile **/
+@media (min-width:200px) and (max-width:466px){
+ .cell {
+   width: 100%;
+ }
+ .cell-content {
+   margin-top: 3em;
+ }
+}
+@media (min-width:466px) and (max-width:575px) {
+ .cell-content {
+   margin-top: 5em;
+ }
+ .cell {
+   width: 100%;
+ }
+}
+@media (min-width: 575px) and (max-width:768px) {
+  .cell {
+   width: 100%;
+ }
+}
+@media (min-width:768px) and (max-width:992px) {
+  .cell-content {
+    margin-top: 3em;
+  }
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .cell-content{
+    margin-top:5em;
+  }
+}
+@media (min-width:768px) and (max-width: 1200px) {
+  .cell {
+   width: 48%;
+ }
+}
+

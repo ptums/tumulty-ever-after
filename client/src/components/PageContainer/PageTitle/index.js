@@ -3,20 +3,18 @@ import { createBrowserHistory } from "history";
 import FaHome from "react-icons/lib/fa/home";
 import "./index.css";
 
+// create browser history
 const history = createBrowserHistory();
-
-// Get the current location.
-const location = history.location;
-
-const returnHome = () => {
-  console.log(location);
-};
 
 const PageTitle = (props) => {
  const { title } = props;
 
  return (
-   <div><h3 className="text-center">{title} - <FaHome onClick={() => returnHome()}/></h3><hr/></div>
+   <div>
+     <h3 className="text-center">
+       {title} - <FaHome onClick={() => history.goBack() }/>
+     </h3><hr/>
+   </div>
  );
 };
 
