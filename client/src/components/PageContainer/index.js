@@ -3,6 +3,7 @@ import { graphql } from "react-apollo";
 import { gql } from "apollo-boost";
 import PageTitle from "./PageTitle/";
 import PageBody from "./PageBody";
+import RsvpContainer from "./RsvpContainer/";
 import "./index.css";
 
 const currentUrl = window.location.pathname.toString();
@@ -27,7 +28,7 @@ const PageContainer = graphql(ABOUT_US)((props) => {
         (data.page !== undefined) ? (
          <div>
           <PageTitle title={data.page[0].title}/>
-          <PageBody content={data.page[0].content}/>
+          {(currentUrl === "/rsvp") ? <RsvpContainer />  : <PageBody content={data.page[0].content}/>}
          </div>
         ) : ""
       }
