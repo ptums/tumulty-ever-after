@@ -13,7 +13,7 @@ var Users = require("../models/Users");
 var Pages = require("../models/Pages");
 
 // The GraphQL schema in string form
-var typeDefs = "\n  type Query { guests: [Guest], users: [Users], pages: [Page] }\n  type Mutation { addGuest(name: String, email: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users, addUser(username: String, password: String): Users }\n  type Guest { _id: String, name: String, email: String, contact: String }\n  type Page { _id: String, link: String, title: String, content: String }\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n";
+var typeDefs = "\n  type Query { guests: [Guest], users: [Users], pages: [Pages], page(link: String):[Page] }\n  type Mutation { addGuest(name: String, email: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users, addUser(username: String, password: String): Users }\n  type Guest { _id: String, name: String, email: String, contact: String }\n  type Pages { _id: String, link: String, title: String, content: String }\n  type Page {_id: String, link: String, title: String, content: String}\n  type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }\n  schema { query: Query, mutation: Mutation }\n";
 
 // The resolvers
 var resolvers = {
@@ -30,6 +30,11 @@ var resolvers = {
     },
     pages: function pages() {
       return Pages.find({}, function (err, data) {
+        return data;
+      });
+    },
+    page: function page(root, args) {
+      return Pages.find({ link: args.link }, function (err, data) {
         return data;
       });
     }

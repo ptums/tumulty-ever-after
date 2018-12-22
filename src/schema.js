@@ -6,10 +6,11 @@ const Pages = require("../models/Pages");
 
 // The GraphQL schema in string form
 const typeDefs = `
-  type Query { guests: [Guest], users: [Users], pages: [Page] }
+  type Query { guests: [Guest], users: [Users], pages: [Pages], page(link: String):[Page] }
   type Mutation { addGuest(name: String, email: String, contact: String): Guest, authUser(username: String, password: String) : Users, unAuthUser(_id: String) : Users, addUser(username: String, password: String): Users }
   type Guest { _id: String, name: String, email: String, contact: String }
-  type Page { _id: String, link: String, title: String, content: String }
+  type Pages { _id: String, link: String, title: String, content: String }
+  type Page {_id: String, link: String, title: String, content: String}
   type Users { _id: String, username: String, password: String, loginAttempts: String!, lockUntil: String!, authed: String!, sessionId:String! }
   schema { query: Query, mutation: Mutation }
 `;
@@ -20,6 +21,7 @@ const resolvers = {
     guests: () => Guests.find({}, (err, data) => data),
     users: () => Users.find({}, (err, data) => data),
     pages: () => Pages.find({}, (err, data) => data),
+    page: (root, args) => Pages.find({link: args.link}, (err, data) => data)
   },
   Mutation: {
     addGuest: async (root, args) => {

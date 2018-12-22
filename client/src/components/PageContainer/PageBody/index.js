@@ -1,13 +1,10 @@
 import React from "react";
-
-import extractValue from "../utility.js";
 import "./index.css";
 
 const PageBody = (props) => {
- const { data, currentUrl } = props;
-
+ const { content} = props;
  return (
-   <div dangerouslySetInnerHTML={{__html: extractValue(data, "content", currentUrl)}}/>
+   <div dangerouslySetInnerHTML={{__html:content}}/>
  );
 };
 

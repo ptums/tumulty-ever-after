@@ -1,14 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import FaHome from "react-icons/lib/fa/home";
-import extractValue from "../utility.js";
 import "./index.css";
 
+const history = createBrowserHistory();
+
+// Get the current location.
+const location = history.location;
+
+const returnHome = () => {
+  console.log(location);
+};
+
 const PageTitle = (props) => {
- const { data, currentUrl } = props;
+ const { title } = props;
 
  return (
-   <h3>{extractValue(data, "title", currentUrl)} - <Link to="/"><FaHome/></Link></h3>
+   <div><h3 className="text-center">{title} - <FaHome onClick={() => returnHome()}/></h3><hr/></div>
  );
 };
 

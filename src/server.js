@@ -36,6 +36,46 @@ app.get("/", (req, res) => {
   res.sendFile(index);
 });
 
+// Create pages 
+function createPages() {
+	const pages = [
+     {
+       link: "/events",
+       title: "Events",
+       content: "<p> Events pages content will go here..."
+     },
+     {
+       link: "/rsvp",
+       title: "RSVP",
+       content: "<p> RSVP pages content will go here..."
+     },
+     {
+       link: "/about-us",
+       title: "About Us",
+       content: "<p> About Us pages content will go here..."
+     },
+      {
+       link: "/accomodations",
+       title: "Accomodations",
+       content: "<p>Accomodations pages content will go here..."
+     },
+     {
+       link: "/registry",
+       title: "Registry",
+       content: "<p>Registry pages content will go here..."
+     },
+     {
+       link: "/transportation",
+       title: "Transportation",
+       content: "<p>Transportation pages content will go here..."
+     },
+     
+
+	];
+	Pages.create(pages, function(err){
+		console.log("pages created!");
+	});
+}
 // Start the server
 app.listen(port, () => {
   console.log(` Server running on: ${port}`);

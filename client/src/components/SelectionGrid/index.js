@@ -11,7 +11,7 @@ import "./index.css";
 const SelectionGrid = () => (
  <div className="SelectionGrid">
   <div className="cell cell-1"> 
-     <Link to='/schedule-events'>
+     <Link to='/events'>
        <img src={Palace} alt="the palace" className="cell-image"/>
        <div className="cell-content">
         <p>What time is the Church? What time is the reception? All your answers here.</p>
