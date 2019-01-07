@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import cookie from "react-cookies";
 import FaPlusSquareO from "react-icons/lib/fa/plus-square-o";
 import { authUser } from "../../utils/authUser/";
 import { unAuthUser } from "../../utils/unAuthUser/";
 import GuestList from "../private/GuestList/";
 import LoginModal from "../LoginModal/";
-import LoveStoryVideo from "../LoveStoryVideo/";
 import SelectionGrid from "../SelectionGrid/";
 import rpFeatured from "../../media/original-family.png";
 import "./index.css";
@@ -73,20 +71,19 @@ class App extends Component {
               <FaPlusSquareO onClick={() => this.openModal()} />
               <div className="card">
                 <img className="card-image-top img-fluid mb-1" src={rpFeatured} alt="rachel peter header" />
-                <h1 className="text-center mt-3">Save The Date!</h1>
+                <h1 className="text-center mt-3">Our Wedding!</h1>
                 <h3 className="text-center mt-2 final-fold-message"><small>Celebrate love, laughter, and happily ever after!</small></h3>
-                <h3 className="text-center final-fold-message"><small>Save the date because Peter and Rachel are getting married</small></h3>
-                <h4 className="text-center final-fold-message"><strong>03/30/2019 Dayton, NJ</strong></h4>
+                {/*<h3 className="text-center final-fold-message"><small>Save the date because Peter and Rachel are getting married</small></h3>
+                <h4 className="text-center final-fold-message"><strong>03/30/2019 Dayton, NJ</strong></h4>*/}
 
-                <h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
+                {/*<h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
                 <h1 className="text-center mt-4">Our Love Story</h1>
-                <LoveStoryVideo />
+                <LoveStoryVideo />*/}
                 <span className="mt-5"/>
                 <SelectionGrid />
                 <h1 className="text-center mt-6">Contact Us</h1>
 
-                <h5 className="text-center final-fold-message">Any questions, comments, just want to say hello? Send us an email<br/>at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a></h5>
-                <h6 className="text-center mb-4 mt-2 final-fold-message">Looking for our registry? Check out our Zola site <Link to="https://www.zola.com/registry/tumultyeverafter" target="_blank" rel="noopener noreferrer">here.</Link></h6>
+                <p className="text-center card-text final-fold-message mb-5">The best part of getting married is getting the opportunity to celebrate with our loved ones. Thank you all for the continuous support and love. We can’t wait to party it up with you March 30th 2019! Please feel free to contact us at <a href="mailto:tumultyeverafter@gmail.com">tumultyeverafter@gmail.com</a> with any questions you may have! </p>
               </div>
             </div>
           </div>

@@ -1,0 +1,11 @@
+.link-text {
+	color:blue;
+	text-decoration: underline;
+}
+.link-text:hover{
+	cursor: pointer;
+}
+.rsvp-iframe {
+	width: 100%;
+	height:700px;
+}

@@ -11,7 +11,13 @@ import "video-react/dist/video-react.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import App from "./components/App/";
 import Create from "./components/Create/";
-import PageContainer from "./components/PageContainer";
+// pages 
+import Events from "./components/pages/Events";
+import AboutUs from "./components/pages/AboutUs";
+import Accomodations from "./components/pages/Accomodations";
+import Registry from "./components/pages/Registry";
+import RSVP from "./components/pages/RSVP";
+import Transportation from "./components/pages/Transportation";
 
 // Create a link to graphql server
 const httpLink = createHttpLink({ uri: "http://localhost:3001/graphql", credentials: "same-origin" });
@@ -44,7 +50,12 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/create" component={Create} />
-        <Route path="/:page" component={PageContainer} />
+        <Route path="/about-us" component={AboutUs} />
+        <Route path="/events" component={Events} />
+        <Route path="/rsvp" component={RSVP} />
+        <Route path="/accomodations" component={Accomodations} />
+        <Route path="/registry" component={Registry} />
+        <Route path="/transportation" component={Transportation} />
       </Switch>
     </BrowserRouter>
   </ApolloProvider>,

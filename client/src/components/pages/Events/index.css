@@ -1,0 +1,10 @@
+.link-text {
+	color:blue;
+	text-decoration: underline;
+}
+.link-text:hover{
+	cursor: pointer;
+}
+.image-half-size {
+	width:50%;
+}
