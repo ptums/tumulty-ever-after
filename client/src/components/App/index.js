@@ -71,14 +71,8 @@ class App extends Component {
               <FaPlusSquareO onClick={() => this.openModal()} />
               <div className="card">
                 <img className="card-image-top img-fluid mb-1" src={rpFeatured} alt="rachel peter header" />
-                <h1 className="text-center mt-3">Our Wedding!</h1>
+                <h1 className="text-center mt-3">March 30, 2019</h1>
                 <h3 className="text-center mt-2 final-fold-message"><small>Celebrate love, laughter, and happily ever after!</small></h3>
-                {/*<h3 className="text-center final-fold-message"><small>Save the date because Peter and Rachel are getting married</small></h3>
-                <h4 className="text-center final-fold-message"><strong>03/30/2019 Dayton, NJ</strong></h4>*/}
-
-                {/*<h5 className="text-center mt-3 final-fold-message">~ Formal Invitation to Follow ~</h5>
-                <h1 className="text-center mt-4">Our Love Story</h1>
-                <LoveStoryVideo />*/}
                 <span className="mt-5"/>
                 <SelectionGrid />
                 <h1 className="text-center mt-6">Contact Us</h1>

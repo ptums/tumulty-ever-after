@@ -30,7 +30,7 @@ const SelectionGrid = () => (
     <Link to="/about-us">
        <img src={PeterRachel} alt="peter rachel" className="cell-image" />
        <div className="cell-content">
-        <p>Rachel and Peter have been together four and half years</p>
+        <p>More about the happy couple.</p>
        </div>
     </Link>
   </div>
