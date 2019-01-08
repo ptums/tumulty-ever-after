@@ -22,7 +22,7 @@ const SelectionGrid = () => (
    <Link to="/rsvp" title={"rsvp"}>
       <img src={Invitation} alt="rsvp" className="cell-image"/>
       <div className="cell-content">
-         <p>We hope to see you here! Please let us know if you can make it:</p>
+         <p>We are looking forward to celebrating with you please let us know if you can make it.</p>
       </div>
     </Link>
   </div>
@@ -46,7 +46,7 @@ const SelectionGrid = () => (
    <Link to="/registry">
       <img src={Flowers} alt="registry" className="cell-image" />
       <div className="cell-content">
-        <p>Your presence is the great gift we could ever ask for and is more than enough to offer for our wedding.</p>
+        <p>Curious about our registry? Find out more here.</p>
       </div>
     </Link>
   </div>
@@ -54,7 +54,7 @@ const SelectionGrid = () => (
    <Link to="/transportation">
       <img src={Transportation} alt="transportation" className="cell-image" />
       <div className="cell-content">
-        <p>Directions how to from St. Cecilia's Church in Dayton to The Palace in Somerset.</p>
+        <p>How to get around!</p>
       </div>
     </Link>
   </div>
