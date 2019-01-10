@@ -14,7 +14,8 @@ const RSVP = () => (
             <h1 class="card-title text-center">RSVP -
               <span className="link-text" onClick={() => history.goBack()}>back</span>
             </h1><hr/>
-            <p className="card-text">We’re so excited to celebrate with you! Let us know if you can make it:</p>
+            <p className="card-text">We’re so excited to celebrate with you! Let us know if you can make it.</p>
+            <p className="card=-text">If you are not seeing the RSVP form below please visit <a href="https://peterandrachel.anrsvp.com/#home" target="_blank" rel="noopener noreferrer">https://peterandrachel.anrsvp.com/#home</a></p>
             <iframe src="https://peterandrachel.anrsvp.com/#home" className="rsvp-iframe" title="rsvp"></iframe>
           </div>
         </div>
