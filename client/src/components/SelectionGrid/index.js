@@ -11,7 +11,7 @@ import "./index.css";
 const SelectionGrid = () => (
  <div className="SelectionGrid">
   <div className="cell cell-1"> 
-     <Link to="http://www.tumultyeverafter.com/events" title={"events"}>
+     <Link to="/events" title={"events"}>
        <img src={Palace} alt="the palace" className="cell-image"/>
        <div className="cell-content">
         <p>What time is the Church? What time is the reception? All your answers here.</p>
@@ -19,7 +19,7 @@ const SelectionGrid = () => (
      </Link>
   </div>
   <div className="cell cell-2">
-   <Link to="http://www.tumultyeverafter.com/rsvp" title={"rsvp"}>
+   <Link to="/rsvp" title={"rsvp"}>
       <img src={Invitation} alt="rsvp" className="cell-image"/>
       <div className="cell-content">
          <p>We are looking forward to celebrating with you please let us know if you can make it.</p>
@@ -27,7 +27,7 @@ const SelectionGrid = () => (
     </Link>
   </div>
   <div className="cell cell-3"> 
-    <Link to="http://www.tumultyeverafter.com/about-us">
+    <Link to="/about-us">
        <img src={PeterRachel} alt="peter rachel" className="cell-image" />
        <div className="cell-content">
         <p>More about the happy couple.</p>
@@ -35,7 +35,7 @@ const SelectionGrid = () => (
     </Link>
   </div>
   <div className="cell cell-4"> 
-    <Link to="http://www.tumultyeverafter.com/accomodations">
+    <Link to="/accomodations">
        <img src={Hotel} alt="fairfield inn" className="cell-image" />
        <div className="cell-content">
         <p>Reserve your night(s) at the Fairfield Inn & Suites Marriot</p>
@@ -43,7 +43,7 @@ const SelectionGrid = () => (
     </Link>
   </div>
   <div className="cell cell-5">
-   <Link to="http://www.tumultyeverafter.com/registry">
+   <Link to="/registry">
       <img src={Flowers} alt="registry" className="cell-image" />
       <div className="cell-content">
         <p>Curious about our registry? Find out more here.</p>
@@ -51,7 +51,7 @@ const SelectionGrid = () => (
     </Link>
   </div>
   <div className="cell cell-6"> 
-   <Link to="http://www.tumultyeverafter.com/transportation">
+   <Link to="/transportation">
       <img src={Transportation} alt="transportation" className="cell-image" />
       <div className="cell-content">
         <p>How to get around!</p>
