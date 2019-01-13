@@ -16,7 +16,7 @@ const RSVP = () => (
             </h1><hr/>
             <p className="card-text">We’re so excited to celebrate with you! Let us know if you can make it.</p>
             <p className="card-text">If you are not seeing the RSVP form below please visit <a href="https://peterandrachel.anrsvp.com/#home" target="_blank" rel="noopener noreferrer">https://peterandrachel.anrsvp.com/#home</a></p>
-            <p className="catd-text">If you are further issues please call: 908-331-1057</p>
+            <p className="catd-text">If you have further issues please call: 908-331-1057</p>
             <iframe src="https://peterandrachel.anrsvp.com/#home" className="rsvp-iframe" title="rsvp"></iframe>
           </div>
         </div>
