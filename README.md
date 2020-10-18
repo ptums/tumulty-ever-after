@@ -4,7 +4,9 @@ This was the official website for my wedding in 2019.
 
 ## Motivation
 
-Every couple getting married makes a website using the [The Knot](https://theknot.com), since I am a professional web developer I thought my wedding would be a good opportunity to exercise something I love doing -- building websites! This site contained content pertaining to all the logistics of our wedding, our a gallery page for our engagement photos, and a video section that hosted our engagement video. I also built out custom authentication, and a feature where guests could RSVP to our wedding and their data was stored and formatted as a downloadable CSV file. This a passion project where I could really excerise my coding skill, it was so much fun to make!
+Every couple getting married makes a website using the [The Knot](https://theknot.com), since I am a professional web developer I thought my wedding would be a good opportunity to exercise something I love doing -- building websites!
+
+This site contained content pertaining to all the logistics of our wedding, our a gallery page for our engagement photos, and a video section that hosted our engagement video. I also built out custom authentication, and a feature where guests could RSVP to our wedding and their data was stored and formatted as a downloadable CSV file. This a passion project where I could really excerise my coding skill, it was so much fun to make!
 
 ## Build status
 
